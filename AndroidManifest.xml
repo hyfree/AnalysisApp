@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.goldencode.travel">
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="一码通行" android:name="com.SecShell.SecShell.ApplicationWrapper" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.user.UserGuideActivity" android:screenOrientation="portrait" android:theme="@style/LoginTheme"/>
+        <activity android:name="com.goldencode.travel.ui.activity.user.UserSplashActivity" android:screenOrientation="portrait" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.user.UserLoginActivity" android:screenOrientation="portrait" android:theme="@style/LoginTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.user.UserForgetPwdActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.MainActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.home.HomeNewsActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.home.DemoActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.goldencode.travel.ui.activity.common.CommonWebViewActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.common.CommonResultActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.riding.RidingCodeRulesActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.riding.RidingCodeCitySelectActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.riding.TcardListActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.riding.TcardAddListActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.riding.TcardOpenActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.StoreActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountChannelOpenActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:name="com.goldencode.travel.ui.activity.account.AccountWithholdResultActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme">
+            <intent-filter>
+                <data android:host="app" android:path="/withholdResult" android:port="8888" android:scheme="goldencode"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.goldencode.travel.ui.activity.account.AccountWXH5WithholdResultActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme">
+            <intent-filter>
+                <data android:scheme="goldencode"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountChannelOrderActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountBalanceRechargeActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountBalanceWithdrawActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountBankManageActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountAddBankCardActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountAddAliPayActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountBalanceDetailActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountPaymentOrderActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountPaymentOrderDetailActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.setting.SettingActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.setting.SettingPasswordActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.setting.SettingLoginPasswordActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:name="com.goldencode.travel.ui.activity.setting.SettingForgetPayPasswordActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme">
+            <intent-filter>
+                <data android:host="app" android:path="/forgetPayPassword" android:port="8888" android:scheme="goldencode"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.setting.SettingFeedbackActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.setting.SettingAboutActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.personal.PersonalHelpCenterActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.personal.PersonalOrederRecordActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.personal.PersonalTcardDetailActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.personal.PersonalRealNameActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.personal.PersonalSettingActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.goldencode.travel.wxapi.WXPayEntryActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountCmbRechargeActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountWeiXinH5RechargeActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <activity android:exported="false" android:name="com.goldencode.travel.ui.activity.account.AccountWeiXinH5WithholdActivity" android:screenOrientation="portrait" android:theme="@style/BaseTheme"/>
+        <meta-data android:name="com.goldencode.v2.appkey" android:value="50011000"/>
+        <provider android:authorities="com.goldencode.travel.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <service android:exported="false" android:name="com.goldencode.travel.services.NetWorkService"/>
+        <activity android:name="com.lljjcoder.style.citylist.CityListSelectActivity"/>
+        <activity android:name="com.lljjcoder.style.citythreelist.ProvinceActivity"/>
+        <activity android:name="com.lljjcoder.style.citythreelist.CityActivity"/>
+        <activity android:name="com.lljjcoder.style.citythreelist.AreaActivity"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>

@@ -1,7 +1,8 @@
 package cn.magicwindow.analysisapp;
 
 import cn.magicwindow.analysisapp.collection.NoDuplicatesArrayList;
-import com.safframwork.tony.common.utils.Preconditions;
+import com.safframework.tony.common.utils.Preconditions;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
